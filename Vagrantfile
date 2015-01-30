@@ -26,6 +26,7 @@ Vagrant.configure("2") do |config|
 
     foreman.vm.network :private_network, ip: "192.168.33.51"
     foreman.vm.network :forwarded_port, guest: 443, host: 8443
+    foreman.vm.network :forwarded_port, guest: 80, host: 8080
   end
 
   config.vm.define :puppetdb do |puppetdb|

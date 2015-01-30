@@ -6,3 +6,4 @@ packer/builds
 packer/modules
 packer/certs
 packer/Vagrantfile
+.vagrant
