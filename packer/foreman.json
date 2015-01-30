@@ -33,7 +33,7 @@
     },
     {
         "type": "puppet-masterless",
-        "manifest_file": "manifests/foreman_vagrant.pp",
+        "manifest_file": "manifests/foreman.pp",
         "module_paths": ["modules"]
     },
     {
