@@ -1,0 +1,11 @@
+---
+:backends:
+  - yaml
+:yaml:
+  :datadir: /etc/puppet/hiera
+:hierarchy:
+  - %{::environment}/nodes/%{::clientcert}
+  - %{::environment}/modules/%{module_name}
+  - %{::environment}/vagrant
+  - %{::environment}/common
+  - %{::environment}/secrets

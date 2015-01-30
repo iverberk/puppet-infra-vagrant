@@ -1,0 +1,6 @@
+packer/packer_cache
+packer/.tmp
+packer/.librarian
+packer/.vagrant
+packer/builds
+packer/modules
