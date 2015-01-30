@@ -1,5 +1,8 @@
 node default {
 
-  include infra::foreman
+  class { 'infra::foreman':
+    answers => 'puppet:///modules/infra/foreman.answers.vagrant'
+  }
+
 
 }

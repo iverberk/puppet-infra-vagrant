@@ -1,6 +1,8 @@
 node default {
 
-  include infra::puppetmaster
+  class { 'infra::puppetmaster':
+    answers => 'puppet:///modules/infra/puppetmaster.answers.vagrant'
+  }
 
   # Fix the common module path
   file_line { 'puppetmaster_common_modules':
@@ -16,7 +18,8 @@ node default {
     hierarchy => [
       '%{::environment}/nodes/%{::clientcert}',
       '%{::environment}/modules/%{module_name}',
-      '%{::environment}/common'
+      '%{::environment}/vagrant',
+      '%{::environment}/common',
     ]
   }
 
