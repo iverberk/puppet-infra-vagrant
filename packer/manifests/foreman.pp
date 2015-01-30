@@ -4,5 +4,4 @@ node default {
     answers => 'puppet:///modules/infra/foreman.answers.vagrant'
   }
 
-
 }
