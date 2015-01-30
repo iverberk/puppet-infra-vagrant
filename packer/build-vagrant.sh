@@ -14,8 +14,8 @@ if [ ! -f builds/packer-puppetmaster.box ]; then
 	vagrant init --force builds/packer-puppetmaster.box
 	vagrant up
 	vagrant ssh -c 'sudo /vagrant/generate_certs.sh'
-	vagrant destroy
-	vagrant box remove --force builds/packer-puppetmaster
+	vagrant destroy --force
+	vagrant box remove --force builds/packer-puppetmaster.box
 	rm -f Vagrantfile
 fi
 
