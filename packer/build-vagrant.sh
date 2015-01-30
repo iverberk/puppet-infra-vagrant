@@ -2,7 +2,7 @@
 
 echo -e "Building CentOS 6.6 box..."
 if [ ! -f builds/packer-centos-6.6-x86_64.ovf ]; then
-	builds/packer build centos-6.6.json
+	packer build centos-6.6.json
 fi
 
 echo -e "Installing Puppet modules..."
